@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <item
+        name="historyMapView"
+        type="id" />
+
+    <item
+        name="tvHistoryMapStatus"
+        type="id" />
+
+    <item
+        name="historyMapProgress"
+        type="id" />
+
+</resources>

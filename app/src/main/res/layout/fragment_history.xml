@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+
+        <Button
+
+            android:id="@+id/btnBack"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="回首頁"
+
+            android:textAllCaps="false" />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="15dp"
+
+            android:text="歷史運動紀錄"
+
+            android:textSize="28sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="5dp"
+
+            android:text="顯示最近運動紀錄"
+
+            android:textSize="15sp" />
+
+
+        <!-- ============================================= -->
+        <!-- 手動重新同步 -->
+        <!-- ============================================= -->
+
+        <Button
+
+            android:id="@+id/btnSyncPending"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            android:text="重新上傳未同步紀錄"
+
+            android:textAllCaps="false" />
+
+
+
+
+        <!-- ============================================= -->
+        <!-- 每週統計 -->
+        <!-- ============================================= -->
+
+        <com.example.project.ui.history.WeeklyStatisticsButton
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+
+            android:text="查看每週統計"
+
+            android:textAllCaps="false" />
+
+
+        <!-- ============================================= -->
+        <!-- 月份 -->
+        <!-- ============================================= -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+
+            <Button
+
+                android:id="@+id/btnPreviousMonth"
+
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+
+                android:text="‹" />
+
+
+            <TextView
+
+                android:id="@+id/tvMonthTitle"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                android:text="2026 年 10 月"
+
+                android:textSize="22sp"
+
+                android:textStyle="bold" />
+
+
+            <Button
+
+                android:id="@+id/btnNextMonth"
+
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+
+                android:text="›" />
+
+
+        </LinearLayout>
+
+
+        <!-- 星期 -->
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+
+            android:columnCount="7">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="日" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="一" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="二" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="三" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="四" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="五" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:text="六" />
+
+
+        </GridLayout>
+
+
+        <GridLayout
+
+            android:id="@+id/calendarGrid"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:columnCount="7" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="#CCCCCC" />
+
+
+        <TextView
+
+            android:id="@+id/tvSelectedDate"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="請選擇日期"
+
+            android:textSize="22sp"
+
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+
+            android:id="@+id/recordsContainer"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

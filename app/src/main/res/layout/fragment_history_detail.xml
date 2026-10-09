@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fillViewport="true">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="24dp">
+
+
+        <!-- ================================================= -->
+        <!-- 返回 -->
+        <!-- ================================================= -->
+
+        <Button
+            android:id="@+id/btnBackHistory"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="回歷史紀錄" />
+
+
+        <!-- ================================================= -->
+        <!-- 標題 -->
+        <!-- ================================================= -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+
+            android:text="運動詳細資料"
+
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <!-- ================================================= -->
+        <!-- 運動方式 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailActivity"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="運動方式："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 日期 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailDate"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="日期："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 開始時間 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailStart"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="開始時間："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 結束時間 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailEnd"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="結束時間："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 運動時間 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailDuration"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="運動時間："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 距離 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailDistance"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="距離："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 步數 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvDetailSteps"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="步數："
+
+            android:textSize="20sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 分隔空間 -->
+        <!-- ================================================= -->
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+
+        <!-- ================================================= -->
+        <!-- 歷史 GPS 路線標題 -->
+        <!-- ================================================= -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="GPS 運動軌跡"
+
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <!-- ================================================= -->
+        <!-- 地圖狀態 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@id/tvHistoryMapStatus"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:text="正在準備地圖..."
+
+            android:textSize="15sp" />
+
+
+        <!-- ================================================= -->
+        <!-- 地圖載入 Progress -->
+        <!-- ================================================= -->
+
+        <ProgressBar
+            android:id="@id/historyMapProgress"
+
+            style="?android:attr/progressBarStyleHorizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:max="100"
+
+            android:progress="0" />
+
+
+        <!-- ================================================= -->
+        <!-- MapLibre -->
+        <!-- ================================================= -->
+
+        <org.maplibre.android.maps.MapView
+            android:id="@id/historyMapView"
+
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+
+            android:layout_marginTop="12dp" />
+
+
+        <!-- ================================================= -->
+        <!-- 圖例 -->
+        <!-- ================================================= -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:text="● 綠色：起點　● 紅色：終點　— 藍線：運動軌跡"
+
+            android:textSize="14sp" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

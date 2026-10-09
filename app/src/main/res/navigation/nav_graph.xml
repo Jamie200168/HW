@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/workoutChoiceFragment">
+
+
+    <fragment
+
+        android:id="@+id/workoutChoiceFragment"
+
+        android:name=
+            "com.example.project.ui.workout.WorkoutChoiceFragment"
+
+        android:label="運動方式" />
+
+
+    <fragment
+
+        android:id="@+id/workoutFragment"
+
+        android:name=
+            "com.example.project.ui.workout.WorkoutFragment"
+
+        android:label="運動紀錄" />
+
+
+    <fragment
+
+        android:id="@+id/summaryFragment"
+
+        android:name=
+            "com.example.project.ui.summary.SummaryFragment"
+
+        android:label="運動成果" />
+
+
+    <fragment
+
+        android:id="@+id/historyFragment"
+
+        android:name=
+            "com.example.project.ui.history.HistoryFragment"
+
+        android:label="歷史紀錄" />
+
+
+    <fragment
+
+        android:id="@+id/historyDetailFragment"
+
+        android:name=
+            "com.example.project.ui.history.HistoryDetailFragment"
+
+        android:label="運動詳細資料" />
+
+
+    <!-- ============================================= -->
+    <!-- 新增：每週統計 -->
+    <!-- ============================================= -->
+
+    <fragment
+
+        android:id="@+id/weeklyStatisticsFragment"
+
+        android:name=
+            "com.example.project.ui.weekly.WeeklyStatisticsFragment"
+
+        android:label="每週運動統計" />
+
+
+    <fragment
+
+        android:id="@+id/weatherFragment"
+
+        android:name=
+            "com.example.project.ui.weather.WeatherFragment"
+
+        android:label="地區天氣" />
+
+
+</navigation>

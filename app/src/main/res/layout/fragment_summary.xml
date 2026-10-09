@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    android:padding="30dp">
+
+
+    <!-- 標題 -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="本次運動成果"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:layout_marginTop="60dp" />
+
+
+    <!-- 運動種類 -->
+    <TextView
+
+        android:id="@+id/tvSummaryType"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="活動：登山"
+
+        android:textSize="22sp"
+
+        android:layout_marginTop="30dp" />
+
+
+    <!-- 運動時間 -->
+    <TextView
+
+        android:id="@+id/tvSummaryTime"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="時間：00:00:00"
+
+        android:textSize="22sp"
+
+        android:layout_marginTop="15dp" />
+
+
+    <!-- 運動距離 -->
+    <TextView
+
+        android:id="@+id/tvSummaryDistance"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="距離：0.00 km"
+
+        android:textSize="22sp"
+
+        android:layout_marginTop="15dp" />
+
+
+    <!-- 運動步數 -->
+    <TextView
+
+        android:id="@+id/tvSummarySteps"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="步數：0"
+
+        android:textSize="22sp"
+
+        android:layout_marginTop="15dp" />
+
+
+    <!-- 回首頁 -->
+    <Button
+
+        android:id="@+id/btnBackHome"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="回首頁"
+
+        android:layout_marginTop="40dp" />
+
+
+</LinearLayout>

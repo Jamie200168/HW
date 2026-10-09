@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fillViewport="true"
+
+    android:background="#F5F6F8">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:gravity="center_horizontal"
+
+        android:padding="28dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="60dp"
+
+            android:text="用戶註冊"
+
+            android:textColor="#111111"
+
+            android:textSize="30sp"
+
+            android:textStyle="bold" />
+
+
+        <!-- ============================================= -->
+        <!-- Username -->
+        <!-- ============================================= -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/tilUsername"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="40dp"
+
+            app:boxBackgroundMode="outline"
+
+            app:errorEnabled="true"
+
+            app:errorIconDrawable="@null">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etUsername"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="使用者名稱"
+
+                android:inputType="text"
+
+                android:singleLine="true" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ============================================= -->
+        <!-- Email -->
+        <!-- ============================================= -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/tilEmail"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:boxBackgroundMode="outline"
+
+            app:errorEnabled="true"
+
+            app:errorIconDrawable="@null">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etEmail"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="電子郵件"
+
+                android:inputType="textEmailAddress"
+
+                android:singleLine="true" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ============================================= -->
+        <!-- Password -->
+        <!-- ============================================= -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/tilRegisterPassword"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:boxBackgroundMode="outline"
+
+            app:endIconMode="password_toggle"
+
+            app:endIconDrawable="@drawable/password_visibility_selector"
+
+            app:endIconContentDescription="顯示或隱藏密碼"
+
+            app:errorEnabled="true"
+
+            app:errorIconDrawable="@null">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etPassword"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="密碼"
+
+                android:inputType="textPassword"
+
+                android:singleLine="true" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+
+            android:id="@+id/btnSubmitRegister"
+
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="28dp"
+
+            android:text="註冊"
+
+            android:textAllCaps="false"
+
+            android:textSize="17sp" />
+
+
+        <Button
+
+            android:id="@+id/btnBackLogin"
+
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+
+            android:text="返回登入"
+
+            android:textAllCaps="false"
+
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

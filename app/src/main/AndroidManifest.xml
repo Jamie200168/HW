@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 網路 -->
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!-- GPS -->
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <!-- 計步 -->
+
+    <uses-permission
+        android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+
+    <!-- Foreground Service -->
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+
+
+    <!-- Android 13+ Notification -->
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <!-- 沒有 Step Counter 的手機仍可安裝 -->
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="false" />
+
+
+    <application
+
+        android:name=".ProjectApplication"
+
+        android:allowBackup="true"
+
+        android:label="運動紀錄"
+
+        android:supportsRtl="true"
+
+        android:theme="@style/Theme.Project"
+
+        android:usesCleartextTraffic="true">
+
+
+        <!-- APP Launcher -->
+
+        <activity
+
+            android:name=".LoginActivity"
+
+            android:exported="true"
+
+            android:windowSoftInputMode="adjustResize">
+
+
+            <intent-filter>
+
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+
+            </intent-filter>
+
+
+        </activity>
+
+
+        <activity
+
+            android:name=".RegisterActivity"
+
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <activity
+
+            android:name=".MainActivity"
+
+            android:exported="false" />
+
+
+        <activity
+
+            android:name=".FeatureActivity"
+
+            android:exported="false" />
+
+
+        <service
+
+            android:name=".service.TrackingService"
+
+            android:enabled="true"
+
+            android:exported="false"
+
+            android:stopWithTask="false"
+
+            android:foregroundServiceType="location|health" />
+
+
+    </application>
+
+
+</manifest>

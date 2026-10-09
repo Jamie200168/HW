@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F5F6F8"
+
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ================================================= -->
+        <!-- 運動類型 -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvActivityType"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="🚶 走路"
+
+            android:textColor="#111111"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+
+        <!-- ================================================= -->
+        <!-- 上次運動紀錄：只顯示目前運動模式 -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLastWorkout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+
+            app:strokeColor="#E4E6E8"
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="上次運動紀錄"
+
+                    android:textColor="#111111"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvLastWorkoutRecord"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="尚無紀錄"
+
+                    android:textColor="#555555"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- 計時 -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="1dp"
+
+            app:strokeColor="#E4E6E8"
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:padding="22dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="運動時間"
+
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="6dp"
+
+                    android:text="00:00:00"
+
+                    android:textColor="#111111"
+                    android:textSize="42sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- 距離 + 步數 -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            android:orientation="horizontal">
+
+
+            <!-- 距離 -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="7dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="1dp"
+
+                app:strokeColor="#E4E6E8"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="14dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="📍 距離"
+
+                        android:textColor="#666666"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvDistance"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="距離：0.0 m"
+
+                        android:textColor="#111111"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- 步數 -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="7dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="1dp"
+
+                app:strokeColor="#E4E6E8"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="14dp">
+
+
+                    <com.example.project.ui.workout.BikeMetricTitleTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="👟 步數"
+
+                        android:textColor="#666666"
+                        android:textSize="15sp" />
+
+
+                    <com.example.project.ui.workout.BikeSpeedTextView
+
+                        android:id="@+id/tvSteps"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="步數：0"
+
+                        android:textColor="#111111"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- 開始 / 結束 -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnStart"
+
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="7dp"
+
+                android:text="開始運動"
+
+                android:textAllCaps="false"
+
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btnFinish"
+
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="7dp"
+
+                android:enabled="false"
+
+                android:text="結束運動"
+
+                android:textAllCaps="false"
+
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- GPS -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+
+            app:strokeColor="#E4E6E8"
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="18dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="📍 GPS 定位"
+
+                    android:textColor="#111111"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvCoordinate"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="座標：0.000000, 0.000000"
+
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- 天氣 -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+
+            app:strokeColor="#E4E6E8"
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="18dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="🌤 目前天氣"
+
+                    android:textColor="#111111"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+                <ProgressBar
+                    android:id="@+id/weatherProgress"
+
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_marginTop="12dp"
+
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvWeatherLocation"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    android:text="地區：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvWeatherStatus"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="天氣狀態：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvRain"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="降雨機率：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvTemperature"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="溫度：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvComfort"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="舒適度：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvWindDirection"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="風向：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvWindSpeed"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="風速：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvHumidity"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="7dp"
+
+                    android:text="相對濕度：--"
+
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvWeatherUpdatedAt"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="更新時間：--"
+
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- 台灣離線地圖 / GPS 運動軌跡 -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- ============================================= -->
+                <!-- 標題 -->
+                <!-- ============================================= -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🗺 運動軌跡"
+                    android:textColor="#111111"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <!-- ============================================= -->
+                <!-- 離線地圖狀態 -->
+                <!-- ============================================= -->
+
+                <TextView
+                    android:id="@+id/tvMapStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="正在準備台灣離線地圖..."
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+
+
+                <!-- ============================================= -->
+                <!-- 第一次啟動複製 PMTiles 時顯示進度 -->
+                <!-- ============================================= -->
+
+                <ProgressBar
+                    android:id="@+id/mapDownloadProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:max="100"
+                    android:progress="0" />
+
+
+                <!-- ============================================= -->
+                <!-- 地圖區 -->
+                <!-- ============================================= -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="8dp">
+
+                    <!-- ========================================= -->
+                    <!-- MapLibre 離線地圖 -->
+                    <!-- ========================================= -->
+
+                    <org.maplibre.android.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone" />
+
+
+                    <!-- ========================================= -->
+                    <!-- 回到目前 GPS -->
+                    <!-- ========================================= -->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFollowLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="◎ 回到定位"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:cornerRadius="24dp" />
+
+                </FrameLayout>
+
+
+                <!-- ============================================= -->
+                <!-- OSM 授權文字 -->
+                <!-- ============================================= -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="end"
+                    android:text="© OpenStreetMap contributors"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="1dp"
+    app:strokeColor="#DDDDDD"
+    app:strokeWidth="1dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+
+        <!-- 時間 -->
+
+        <TextView
+            android:id="@+id/tvItemPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09/15 12:00 ～ 09/15 15:00"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <!-- 下方：左邊資料 + 右邊圖片 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <!-- 左邊文字 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvItemWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天氣狀態：陰"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemRain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="降雨機率：20%"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="溫度：27度"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemComfort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="舒適度：舒適"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemWindDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="風向：東北風"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemWindSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="風速：6公尺"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+                <TextView
+                    android:id="@+id/tvItemHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="相對濕度：87至88%"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+
+
+            <!-- 右邊天氣圖片 -->
+
+            <ImageView
+                android:id="@+id/imgWeather"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="天氣圖示"
+                android:scaleType="fitCenter" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
